@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  app:
+    build: 
+      context: .
+    ports: 
+      - 8080:8080
+    environment:
+      DATABASE_URL: localhost
+      DATABASE_USERNAME: abcd
+      DATABASE_PASSWORD: abcd
+  banco:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_USERNAME: abcd
+      MYSQL_ROOT_PASSWORD: abcd
